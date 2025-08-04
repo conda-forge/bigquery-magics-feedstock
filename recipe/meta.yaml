@@ -1,5 +1,5 @@
 {% set name = "bigquery-magics" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 2a49ea7a0d91f8146ee9a0c48b40fd88254137c057e023325bfb9e1bcd92fa25
+  sha256: df43a812095ca07e54321a0cb9e1df933f4025cc485946556ebf40a05d0d5309
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - ipython >=7.23.1
     - ipykernel >=5.5.6
     - packaging >=20.0.0
-    - pandas >=1.1.0
+    - pandas >=1.2.0
     - pyarrow >=3.0.0
     - pydata-google-auth >=1.5.0
     - tqdm >=4.7.4,<5.0.0
