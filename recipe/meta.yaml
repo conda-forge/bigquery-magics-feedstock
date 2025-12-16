@@ -1,5 +1,5 @@
 {% set name = "bigquery-magics" %}
-{% set version = "0.10.3" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0afb2933a3b4c2acba7baa6855396130a513a50c0c1ad270bd9110f259910a11
+  sha256: b8b67d41eccac30ebdc7cf070dc9e933c006fd09064e69d08876681c1ff28a94
 
 build:
   noarch: python
