@@ -1,5 +1,5 @@
 {% set name = "bigquery-magics" %}
-{% set version = "0.12.2" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 4398b8047e0d357250d42f99ee4b84dd29e2414ad629c26f43dfe3d8823509c3
+  sha256: 95ca27984b45e95808b004badd3f7d4c63ce077987f2f7b1f505b78945f3b2fe
 
 build:
   noarch: python
@@ -20,15 +20,16 @@ requirements:
     - pip
     - setuptools
   run:
+    - pyopenssl >=23.3.0
     - python >={{ python_min }}
-    - db-dtypes >=0.3.0,<2.0.0
+    - db-dtypes >=1.1.1,<2.0.0
     - google-cloud-bigquery-core >=3.13.0,<4.0.0
     - ipywidgets >=7.7.1
     - ipython >=7.23.1
     - ipykernel >=5.5.6
     - packaging >=20.0.0
-    - pandas >=1.2.0
-    - pyarrow >=3.0.0
+    - pandas >=1.5.3
+    - pyarrow >=12.0.0
     - pydata-google-auth >=1.5.0
     - tqdm >=4.7.4,<5.0.0
 
